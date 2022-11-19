@@ -1,0 +1,62 @@
+#navBar {
+    background-color: rgb(92, 151, 218);
+    display: flex;
+    padding: 2rem;
+    text-align: center;
+}
+
+#Logo {
+    border-radius: 80px;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 150px;
+}
+
+li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+a {
+    font-size: 1.6rem;
+}
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5rem;
+    position: relative;
+    top: 110px;
+}
+
+.submenu {
+    padding: 10px;
+    visibility: hidden;
+    background-color: rgb(92, 151, 218);
+    position: absolute;
+}
+
+.submenu li {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.menuItem:hover {
+    font-weight: 700;
+}
+
+.menuItem:hover .submenu {
+    visibility: visible;
+}
+
+.fa-solid{
+    font-size: 3rem;
+    bottom: 2rem;
+    margin-left: 120px;
+}
+
+.cartItems{
+    font-size: 1.6rem;
+    margin-left: 0;
+}
