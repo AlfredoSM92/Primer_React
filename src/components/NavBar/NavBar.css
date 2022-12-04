@@ -1,8 +1,9 @@
 #navBar {
-    background-color: rgb(92, 151, 218);
+    background-color: rgba(102, 150, 204, 0.753);
     display: flex;
     padding: 2rem;
     text-align: center;
+    border-radius: 0 0 2rem 2rem;
 }
 
 #Logo {
@@ -33,7 +34,7 @@ a {
 .submenu {
     padding: 10px;
     visibility: hidden;
-    background-color: rgb(92, 151, 218);
+    background-color: rgba(102, 150, 204, 0.753);
     position: absolute;
 }
 

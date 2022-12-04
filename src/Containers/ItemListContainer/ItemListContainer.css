@@ -1,0 +1,20 @@
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#div__loading {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+#text__waiting {
+    text-align: center;
+}
+
+#img__loading {
+    width: 100px;
+    margin: 0 auto;
+}

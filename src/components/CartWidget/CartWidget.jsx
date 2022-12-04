@@ -1,8 +1,8 @@
 export const CartWidget = () => {
   return (
     <>
-    <i class="fa-solid fa-cart-shopping"></i>
-    <p class="cartItems">4 productos</p>
+    <i className="fa-solid fa-cart-shopping"></i>
+    <p className="cartItems">4 productos</p>
     </>
   )
 }
