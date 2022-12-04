@@ -11,10 +11,11 @@ function NavBar() {
                 <ul id='navMenu'>
                     <li className="menuItem">Categorías
                         <ul className='submenu'>
-                            <li><a href="#">Shooter</a></li>
+                            <li><a href="#">Acción</a></li>
                             <li><a href="#">Conducción</a></li>
-                            <li><a href="#">Plataformas</a></li>
                             <li><a href="#">Estrategia</a></li>
+                            <li><a href="#">Plataformas</a></li>
+                            <li><a href="#">Shooter</a></li>
                         </ul>
                     </li>
                     <li className="menuItem">Consolas
