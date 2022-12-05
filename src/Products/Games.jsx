@@ -11,7 +11,7 @@ const games = [{
     name: "Gears of war 5",
     img: "https://m.media-amazon.com/images/I/71ls7-2FwLL._AC_SL1000_.jpg",
     price: 900,
-    category: "Action",
+    category: "Acción",
     console: "Xbox"
   },
   {
@@ -19,7 +19,7 @@ const games = [{
     name: "Forza Horizon 5",
     img: "https://cf.shopee.com.mx/file/46b357e069fd315deaf1f9eafc0587c9",
     price: 1600,
-    category: "Driving",
+    category: "Conducción",
     console: "Xbox"
   },
   {
@@ -27,7 +27,7 @@ const games = [{
     name: "Crash Bandicoot - Insane Trilogy",
     img: "https://juegosdigitalesmexico.mx/files/images/productos/1553105166-crash-bandicoot-n-sane-trilogy-ps4-primaria.jpg",
     price: 800,
-    category: "Platform",
+    category: "Plataforma",
     console: "Play Station"
   },
   {
@@ -35,7 +35,7 @@ const games = [{
     name: "Spiderman - Miles Morales",
     img: "https://m.media-amazon.com/images/I/81sB3Qert+L._AC_UL320_.jpg",
     price: 1500,
-    category: "Action",
+    category: "Acción",
     console: "Play Station"
   },
   {
@@ -43,7 +43,7 @@ const games = [{
     name: "Little Nightmares II",
     img: "https://m.media-amazon.com/images/I/713cC6Ew7yS._AC_SL1500_.jpg",
     price: 700,
-    category: "Platform",
+    category: "Plataforma",
     console: "Play Station"
   },
   {
@@ -51,7 +51,7 @@ const games = [{
     name: "Mario Kart",
     img: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2017/02/mario-kart-8-deluxe-caratula.jpg?itok=1QuQWrDy",
     price: 1300,
-    category: "Driving",
+    category: "Conducción",
     console: "Nintendo"
   },
   {
@@ -59,7 +59,7 @@ const games = [{
     name: "Super Mario Odyssey",
     img: "https://cl.buscafs.com/www.levelup.com/public/uploads/images/463252_256x419.jpg",
     price: 1300,
-    category: "platform",
+    category: "Plataforma",
     console: "Nintendo"
   },
   {
@@ -67,7 +67,7 @@ const games = [{
     name: "Mario  Rabidds - Kingdom Battle",
     img: "https://m.media-amazon.com/images/I/8142IK7mMuL._AC_SY500_.jpg",
     price: 500,
-    category: "Strategy",
+    category: "Estrategia",
     console: "Nintendo"
   }]
 
@@ -77,7 +77,7 @@ export const myPromise = () => {
     if (games.length > 0) {
       setTimeout(() => {
         res(games)
-      }, 4000)
+      }, 2000)
     } else {
       rej("error")
     }

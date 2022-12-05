@@ -6,7 +6,7 @@ export default function ItemCount() {
     const[count, setCount]= useState(1)
 
     let add = () => {
-        if(count >= 1){
+        if(count >= 1 && count <10 ){
             setCount(count +1)
         }
     }

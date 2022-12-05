@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList'
 import {myPromise} from '../../Products/Games';
 import './ItemListContainer.css'
@@ -6,13 +7,23 @@ import './ItemListContainer.css'
 export const ItemListContainer = () => {
   const [products, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {id} = useParams() 
+  console.log(id)
 
   useEffect(() => {
-    myPromise()
-      .then(res => setProduct(res))
+    if(id){
+      myPromise()
+      .then(res => setProduct(res.filter(el => el.category == id)))
       .catch(fail => console.log(fail))
       .finally(() => setLoading(false))
-  }, [])
+    }
+    else{
+      myPromise()
+        .then(res => setProduct(res))
+        .catch(fail => console.log(fail))
+        .finally(() => setLoading(false))
+    }
+  }, [id])
 
   return (
     <>

@@ -1,21 +1,24 @@
 import Logo from '../img/Logo.png'
 import './NavBar.css'
 import { CartWidget } from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+
 
 function NavBar() {
 
     return (
         <div id="navBar">
+            <Link to="/">
             <img id="Logo" src={Logo} alt="Logo" />
+            </Link>
             <nav>
                 <ul id='navMenu'>
                     <li className="menuItem">Categorías
                         <ul className='submenu'>
-                            <li><a href="#">Acción</a></li>
-                            <li><a href="#">Conducción</a></li>
-                            <li><a href="#">Estrategia</a></li>
-                            <li><a href="#">Plataformas</a></li>
-                            <li><a href="#">Shooter</a></li>
+                            <li><Link to="/category/Acción">Acción</Link></li>
+                            <li><Link to="/category/Conducción">Conducción</Link></li>
+                            <li><Link to="/category/Estrategia">Estrategia</Link></li>
+                            <li><Link to="/category/Shooter">Shooter</Link></li>
                         </ul>
                     </li>
                     <li className="menuItem">Consolas
@@ -34,7 +37,7 @@ function NavBar() {
                         </ul>
                     </li>
                     <li className="menuItem">Contácto</li>
-                    <CartWidget/>
+                        <CartWidget />
                 </ul>
             </nav>
         </div>
