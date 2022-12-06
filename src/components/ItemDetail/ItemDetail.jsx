@@ -1,7 +1,8 @@
 import React from 'react'
+import ChangeButton from '../ChangeButton/ChangeButton'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
-function ItemDetail({ product }) {
+function ItemDetail({ product, count }) {
   return (
     <>
     <section id="item__detail">
@@ -11,10 +12,10 @@ function ItemDetail({ product }) {
         <p className='item__info'>Categoría: {product.category}</p>
         <p className='item__info'>Precio: ${product.price}</p>
         <p className='item__info'>Consola: {product.console}</p>
+        <p className='item__info'>Unidaes disponibles: {product.stock}</p>
       </div>
       <div className='"div__item'>
-        <ItemCount/>
-        <button id="addToCart">Agregar a carrito</button>
+        <ItemCount stock={product.stock}/>
       </div>
     </section>
     </>

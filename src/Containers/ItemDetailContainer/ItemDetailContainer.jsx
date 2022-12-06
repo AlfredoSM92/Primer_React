@@ -23,7 +23,7 @@ function ItemDetailContainer() {
     :
     <ItemDetail product={products}/>
     }
-    </>
+    </> 
   )
 }
 

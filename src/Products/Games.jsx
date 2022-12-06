@@ -4,7 +4,8 @@ const games = [{
     img: "https://cdn-products.eneba.com/resized-products/afNMnESjVkMv7QGAlZ7IlH3J-YQN3PNssAc0KSoGrFA_350x200_3x-0.jpeg",
     price: 1300,
     category: "Shooter",
-    console: "Xbox"
+    console: "Xbox",
+    stock:5
   },
   {
     id: 2,
@@ -12,7 +13,8 @@ const games = [{
     img: "https://m.media-amazon.com/images/I/71ls7-2FwLL._AC_SL1000_.jpg",
     price: 900,
     category: "Acción",
-    console: "Xbox"
+    console: "Xbox",
+    stock: 20
   },
   {
     id: 3,
@@ -20,7 +22,8 @@ const games = [{
     img: "https://cf.shopee.com.mx/file/46b357e069fd315deaf1f9eafc0587c9",
     price: 1600,
     category: "Conducción",
-    console: "Xbox"
+    console: "Xbox",
+    stock: 15
   },
   {
     id: 4,
@@ -28,7 +31,8 @@ const games = [{
     img: "https://juegosdigitalesmexico.mx/files/images/productos/1553105166-crash-bandicoot-n-sane-trilogy-ps4-primaria.jpg",
     price: 800,
     category: "Plataforma",
-    console: "Play Station"
+    console: "Play Station",
+    stock: 10
   },
   {
     id: 5,
@@ -36,7 +40,8 @@ const games = [{
     img: "https://m.media-amazon.com/images/I/81sB3Qert+L._AC_UL320_.jpg",
     price: 1500,
     category: "Acción",
-    console: "Play Station"
+    console: "Play Station",
+    stock: 8
   },
   {
     id: 6,
@@ -44,7 +49,8 @@ const games = [{
     img: "https://m.media-amazon.com/images/I/713cC6Ew7yS._AC_SL1500_.jpg",
     price: 700,
     category: "Plataforma",
-    console: "Play Station"
+    console: "Play Station",
+    stock: 19
   },
   {
     id: 7,
@@ -52,7 +58,8 @@ const games = [{
     img: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2017/02/mario-kart-8-deluxe-caratula.jpg?itok=1QuQWrDy",
     price: 1300,
     category: "Conducción",
-    console: "Nintendo"
+    console: "Nintendo",
+    stock: 20
   },
   {
     id: 8,
@@ -60,7 +67,8 @@ const games = [{
     img: "https://cl.buscafs.com/www.levelup.com/public/uploads/images/463252_256x419.jpg",
     price: 1300,
     category: "Plataforma",
-    console: "Nintendo"
+    console: "Nintendo",
+    stock: 12
   },
   {
     id: 9,
@@ -68,7 +76,8 @@ const games = [{
     img: "https://m.media-amazon.com/images/I/8142IK7mMuL._AC_SY500_.jpg",
     price: 500,
     category: "Estrategia",
-    console: "Nintendo"
+    console: "Nintendo",
+    stock: 25
   }]
 
 
