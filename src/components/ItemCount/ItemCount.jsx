@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
 
-export default function ItemCount({stock}) {
+export default function ItemCount({stock, addToCart}) {
     const[count, setCount]= useState(1)
 
     let add = () => {
@@ -16,9 +16,9 @@ export default function ItemCount({stock}) {
        setCount(count-1)
     }
 
-    function addToCart () {
-        console.log("La cantidad de productos añadidos es: " + count)
-    }
+    function HandleAdd(){
+        addToCart(count)
+      }
     
 
   return (
@@ -29,7 +29,7 @@ export default function ItemCount({stock}) {
         <p>{count}</p>
         <button onClick={less}>-</button>
     </div>
-    <button id="addToCart" onClick={addToCart}>Agregar a carrito</button>
+    <button id="addToCart" onClick={HandleAdd}>Agregar a carrito</button>
     </>
   )
 }

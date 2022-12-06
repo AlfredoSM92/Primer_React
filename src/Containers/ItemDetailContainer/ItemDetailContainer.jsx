@@ -5,7 +5,7 @@ import { myPromise } from '../../Products/Games';
 import './ItemDetailContainer.css'
 
 function ItemDetailContainer() {
-  const [products, setProduct] = useState([]);
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const {id} =useParams()
   
@@ -21,7 +21,7 @@ function ItemDetailContainer() {
     {loading ?
       <img id="img__loading" src="https://acegif.com/wp-content/uploads/loading-13.gif" alt="" />
     :
-    <ItemDetail product={products}/>
+    <ItemDetail product={product}/>
     }
     </> 
   )
