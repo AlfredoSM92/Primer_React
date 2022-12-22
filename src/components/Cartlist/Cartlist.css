@@ -1,0 +1,22 @@
+#cart__info{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#clear__button {
+    height: 40px;
+    background-color: rgb(219, 67, 67);
+}
+
+.img__product {
+    width: 100px;
+    height: 100px;
+}
+
+#shop__info {
+    display: block
+}

@@ -1,8 +1,9 @@
-import React from 'react'
+import { memo } from 'react'
 import Item from '../Item/Item'
 import "./ItemList.css"
   
-  function ItemList({products}) {
+
+const ItemList = memo( ({products}) => {
     return (
         <>
         <div id="Item__list">
@@ -11,5 +12,5 @@ import "./ItemList.css"
         </>
     )
   }
-  
+)
   export default ItemList

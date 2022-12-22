@@ -23,7 +23,7 @@ function NavBar() {
                     </li>
                     <li className="menuItem">Consolas
                         <ul className='submenu'>
-                            <li><a href="#">Xbox</a></li>
+                            <li><a href="/console/Xbox">Xbox</a></li>
                             <li><a href="#">Play Station</a></li>
                             <li><a href="#">Nintendo</a></li>
                         </ul>
@@ -37,7 +37,9 @@ function NavBar() {
                         </ul>
                     </li>
                     <li className="menuItem">Contácto</li>
+                    <Link to="/cart">
                         <CartWidget />
+                    </Link>
                 </ul>
             </nav>
         </div>

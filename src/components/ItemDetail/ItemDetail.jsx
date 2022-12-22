@@ -1,12 +1,19 @@
-import React from 'react'
-import ChangeButton from '../ChangeButton/ChangeButton'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useCartContext } from '../../Context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+
 function ItemDetail({ product}) {
-  
-  function addToCart(cant) {
-    console.log(`Compraste: ${cant} ${product.name}`)
+  const [isCant, setIsCant] = useState(false)
+
+  const {addToCart} = useCartContext()
+
+  function onAdd(cant) {
+    addToCart({...product, cant})
+    setIsCant(true)
   }
+  
 
   return (
     <>
@@ -20,7 +27,20 @@ function ItemDetail({ product}) {
         <p className='item__info'>Unidades disponibles: {product.stock}</p>
       </div>
       <div className='"div__item'>
-        <ItemCount stock={product.stock} addToCart={addToCart}/>
+        {
+          isCant ? 
+          <div id="buttons">
+          <Link to="/cart">
+            <button>Ir a Carrito</button>
+          </Link>
+          <Link to="/">
+            <button>Seguir comprando</button>
+          </Link>
+          </div>
+          :
+        <ItemCount stock={product.stock}
+                   onAdd={onAdd}/>
+        }
       </div>
     </section>
     </>

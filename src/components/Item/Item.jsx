@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './Item.css'
 
-export default function Item({ product }) {
+export default memo( function Item({ product }) {
 
     return (
             <div id='card'>
@@ -16,3 +16,4 @@ export default function Item({ product }) {
             </div>
     )
 }
+)

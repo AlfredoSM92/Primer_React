@@ -1,25 +1,31 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList'
-import {myPromise} from '../../Products/Games';
+import { collection, getDocs, getFirestore, orderBy, query, where } from 'firebase/firestore'
 import './ItemListContainer.css'
 
 export const ItemListContainer = () => {
-  const [products, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const {id} = useParams() 
-  console.log(id)
+  const { id } = useParams()
 
   useEffect(() => {
-    if(id){
-      myPromise()
-      .then(res => setProduct(res.filter(el => el.category == id)))
-      .catch(fail => console.log(fail))
-      .finally(() => setLoading(false))
+    const db = getFirestore()
+    const queryCollection = collection(db, 'productos')
+
+    //Traer filtrado
+    if (id) {
+      const queryFilter = query(queryCollection, where('category', '==', id)) //Trae Filtrada
+      getDocs(queryFilter)
+        .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+        .catch(fail => console.log(fail))
+        .finally(() => setLoading(false))
     }
-    else{
-      myPromise()
-        .then(res => setProduct(res))
+    
+    //Traer todos
+    else {
+      getDocs(queryCollection)
+        .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data() }))))
         .catch(fail => console.log(fail))
         .finally(() => setLoading(false))
     }
@@ -27,14 +33,14 @@ export const ItemListContainer = () => {
 
   return (
     <>
-    { loading ? 
-    <div id="div__loading">
-      <img id="img__loading" src="https://acegif.com/wp-content/uploads/loading-13.gif" alt="" />
-      <h2 id="text__waiting">Estamos cargando nuestros productos, esperamos disfrutes mucho tu visita</h2>
-    </div>
-    :
-      <ItemList products={products} />
-    }
+      {loading ?
+        <div id="div__loading">
+          <img id="img__loading" src="https://acegif.com/wp-content/uploads/loading-13.gif" alt="" />
+          <h2 id="text__waiting">Estamos cargando nuestros productos, esperamos disfrutes mucho tu visita</h2>
+        </div>
+        :
+        <ItemList products={products} />
+      }
     </>
   )
 }

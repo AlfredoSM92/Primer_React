@@ -10,8 +10,10 @@
 .card__img {
     width: 250px;
     height: 250px;
-    border-radius: 5px;
+    border-radius: 25px;
     margin-top: 10px;
+    border: 5px solid rgba(102, 150, 204, 0.753);
+    box-shadow: 0 0 10px 5px rgba(102, 150, 204, 0.753);
 }
 
 #product__name {

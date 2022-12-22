@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#clear__button {
+    margin-top: 10px;
+    width: fit-content;
+    background-color: rgb(219, 67, 67);
+}
+
+#totalPrice {
+    margin-top: 30px;
+}
+
+#goHome {
+    font-size: 2.5rem;
+    color: rgb(59, 110, 165);
+    text-decoration: underline;
+
+}

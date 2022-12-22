@@ -1,7 +1,7 @@
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import { myPromise } from '../../Products/Games';
 import './ItemDetailContainer.css'
 
 function ItemDetailContainer() {
@@ -9,12 +9,14 @@ function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
   const {id} =useParams()
   
-  useEffect(() => {
-    myPromise()
-      .then(res => setProduct(res.find(el => el.id == id)))
-      .catch(fail => console.log(fail))
-      .finally(() => setLoading(false))
-  }, [])
+  useEffect (()=>{
+    const db = getFirestore()
+    const queryDoc= doc(db, 'productos', id)
+    getDoc(queryDoc)
+    .then(res => setProduct( {id: res.id, ...res.data()} ))
+    .catch(fail => console.log(fail))
+    .finally(() => setLoading(false))
+  },[id])
 
   return (
     <>

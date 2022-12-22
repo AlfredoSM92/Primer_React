@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
 
-export default function ItemCount({stock, addToCart}) {
+export default function ItemCount({stock, onAdd}) {
     const[count, setCount]= useState(1)
 
     let add = () => {
@@ -17,7 +17,7 @@ export default function ItemCount({stock, addToCart}) {
     }
 
     function HandleAdd(){
-        addToCart(count)
+        onAdd(count)
       }
     
 

@@ -26,9 +26,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 5rem;
+    column-gap: 3rem;
     position: relative;
-    top: 110px;
+    top: 100px;
 }
 
 .submenu {
@@ -51,13 +51,3 @@ a {
     visibility: visible;
 }
 
-.fa-solid{
-    font-size: 3rem;
-    bottom: 2rem;
-    margin-left: 120px;
-}
-
-.cartItems{
-    font-size: 1.6rem;
-    margin-left: 0;
-}
