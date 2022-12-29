@@ -5,25 +5,25 @@ import Cart from '../../Components/Cart/Cart'
 import './CartContainer.css'
 
 const CartContainer = () => {
-  const { cartList} = useCartContext()
+  const { cartList } = useCartContext()
 
   return (
     <section id='cartContainer'>
       {cartList.length !== 0 ?
         <>
-          {cartList.map(product => <Cart key={product.id} product={product}/>)}
-          <CartForm/>
-        </> 
+          {cartList.map(product => <Cart key={product.id} product={product} />)}
+          <CartForm />
+        </>
         :
-    <>
-    <h2>Carrito Vacío</h2>
-    <Link to='/'>
-      <p id="goHome">Ver productos</p>
-      </Link>
-    </>
+        <>
+          <h2>Carrito Vacío</h2>
+          <Link to='/'>
+            <p id="goHome">Ver productos</p>
+          </Link>
+        </>
       }
     </section>
   )
 }
 
-      export default CartContainer
+export default CartContainer

@@ -13,5 +13,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const initFirestoreApp = () => {
-    return app
+  return app
 }

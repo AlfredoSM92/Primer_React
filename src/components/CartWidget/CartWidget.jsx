@@ -3,12 +3,12 @@ import './CartWidget.css'
 
 
 export const CartWidget = () => {
-  const{totalCant} = useCartContext()
-  
+  const { totalCant } = useCartContext()
+
   return (
     <div id="widget">
-    <p id="cant">{totalCant() !== 0 && totalCant()}</p>
-    <i className="fa-solid fa-cart-shopping"></i>
+      <p id="cant">{totalCant() !== 0 && totalCant()}</p>
+      <i className="fa-solid fa-cart-shopping"></i>
     </div>
   )
 }

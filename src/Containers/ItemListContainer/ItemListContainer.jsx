@@ -21,7 +21,7 @@ export const ItemListContainer = () => {
         .catch(fail => console.log(fail))
         .finally(() => setLoading(false))
     }
-    
+
     //Traer todos
     else {
       getDocs(queryCollection)
