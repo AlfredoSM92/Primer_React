@@ -8,3 +8,5 @@
 - Firebase: Para el sistema de almacenamiento de productos y órdenes de compra
 - Sweet Alert para animación de eventos on click
 - FontAwesome para icono de cart
+
+Vista de deploy: https://conturrido-games.netlify.app/
