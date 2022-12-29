@@ -18,6 +18,12 @@ export default function ItemCount({stock, onAdd}) {
 
     function HandleAdd(){
         onAdd(count)
+        Swal.fire({
+            title: 'Gracias',
+            text: 'Producto añadido a tu carrito',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          })
       }
     
 

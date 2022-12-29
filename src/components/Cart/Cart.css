@@ -1,10 +1,11 @@
 #cart__info{
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    border: 2px solid rgba(102, 150, 204, 0.753);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #clear__button {
@@ -13,8 +14,8 @@
 }
 
 .img__product {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 #shop__info {

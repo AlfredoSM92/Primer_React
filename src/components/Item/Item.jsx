@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Item.css'
 
 export default memo( function Item({ product }) {

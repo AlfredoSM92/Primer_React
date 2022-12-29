@@ -1,43 +1,18 @@
-import { addDoc, collection, getFirestore } from 'firebase/firestore'
-import React from 'react'
 import { Link } from 'react-router-dom'
-import Cartlist from '../../components/Cartlist/Cartlist'
 import { useCartContext } from '../../Context/CartContext'
+import CartForm from '../../Components/CartForm/CartForm'
+import Cart from '../../Components/Cart/Cart'
 import './CartContainer.css'
 
 const CartContainer = () => {
-  const { cartList, totalPrice, cleanCart} = useCartContext()
-  console.log(cartList)
-
-  const addOrder = () => {
-    const order = {}
-    order.buyer = {name:"Juanito", phone: 5521874659, email: 'j@yahoo.com'}
-    order.items = cartList.map(({id, price, name}) => ({id, price, name}))
-    order.price = totalPrice()
-
-    const db = getFirestore()
-    const queryCollection = collection(db, 'orders')
-    addDoc(queryCollection, order)
-    .then(resp => console.log(resp))
-    .catch(err => console.log(err))
-    .finally(()=> cleanCart())
-  }
-
-  const refreshOrder = () => {
-    const db = getFirestore()
-    const queryCollection = collection(db, 'orders')
-    const queryDoc = doc(db, 'products', )
-
-  }
+  const { cartList} = useCartContext()
 
   return (
-    <section>
+    <section id='cartContainer'>
       {cartList.length !== 0 ?
         <>
-          {cartList.map(product => <Cartlist key={product.id} product={product}/>)}
-          <p id="totalPrice">Total a pagar: {totalPrice()}</p>
-          <button id="clear__button" onClick={cleanCart}>Vaciar Carrito</button>
-          <button onClick={addOrder}>Comprar</button>
+          {cartList.map(product => <Cart key={product.id} product={product}/>)}
+          <CartForm/>
         </> 
         :
     <>

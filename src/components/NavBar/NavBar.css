@@ -1,7 +1,8 @@
 #navBar {
     background-color: rgba(102, 150, 204, 0.753);
     display: flex;
-    padding: 2rem;
+    justify-content:space-around;
+    align-items: center;
     text-align: center;
     border-radius: 0 0 2rem 2rem;
 }
@@ -10,7 +11,7 @@
     border-radius: 80px;
     max-width: 120px;
     max-height: 120px;
-    margin-right: 150px;
+    padding: 2rem;
 }
 
 li {
@@ -18,36 +19,9 @@ li {
     font-size: 2rem;
 }
 
-a {
-    font-size: 1.6rem;
-}
-
 #navMenu {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     column-gap: 3rem;
     position: relative;
-    top: 100px;
 }
-
-.submenu {
-    padding: 10px;
-    visibility: hidden;
-    background-color: rgba(102, 150, 204, 0.753);
-    position: absolute;
-}
-
-.submenu li {
-    width: 100px;
-    margin-top: 10px;
-}
-
-.menuItem:hover {
-    font-weight: 700;
-}
-
-.menuItem:hover .submenu {
-    visibility: visible;
-}
-
